@@ -20,6 +20,7 @@ jobs:
      - name: build and push
        uses: docker/build-push-action@v7
        with:
+        context: ./frontend
         push: true
         tags: ${{ vars.DOCKERHUB_USERNAME}}/devboard-fe-master:latest
 
